@@ -1,0 +1,216 @@
+{
+  "doc": {
+    "path": "/Users/olivierbrueckner/Desktop/etch-a-turtle.blokdots",
+    "title": "etch-a-turtle"
+  },
+  "blokdots": {
+    "version": "0.4.8"
+  },
+  "ifttt": [
+    {
+      "id": 0,
+      "title": "Card 0",
+      "type": "TRIGGER",
+      "fallbackTitle": "Card 0",
+      "isValid": true,
+      "isInactive": false,
+      "isInit": false,
+      "if": {
+        "slot": "A0",
+        "componentType": "Potentiometer",
+        "componentName": "Potentiometer",
+        "isMissingComponent": false,
+        "componentIsNotSetup": false,
+        "isMissingLiveslot": false,
+        "isMissingIntegration": false,
+        "action": "changing",
+        "parameters": {}
+      },
+      "then": {
+        "slot": "2",
+        "componentType": "Socket.IO Server",
+        "componentName": "Socket.IO Server",
+        "isMissingComponent": false,
+        "componentIsNotSetup": false,
+        "isMissingLiveslot": false,
+        "isMissingIntegration": false,
+        "reaction": "send",
+        "parameters": {
+          "message": "poti"
+        }
+      },
+      "errorLog": []
+    },
+    {
+      "id": 1,
+      "title": "Card 1",
+      "type": "TRIGGER",
+      "fallbackTitle": "Card 1",
+      "isValid": true,
+      "isInactive": false,
+      "isInit": false,
+      "if": {
+        "slot": "6",
+        "componentType": "Button",
+        "componentName": "PenButton",
+        "isMissingComponent": false,
+        "componentIsNotSetup": false,
+        "isMissingLiveslot": false,
+        "isMissingIntegration": false,
+        "action": "pressed",
+        "parameters": {
+          "count": 1
+        }
+      },
+      "then": {
+        "slot": "2",
+        "componentType": "Socket.IO Server",
+        "componentName": "Socket.IO Server",
+        "isMissingComponent": false,
+        "componentIsNotSetup": false,
+        "isMissingLiveslot": false,
+        "isMissingIntegration": false,
+        "reaction": "send",
+        "parameters": {
+          "message": "penDown"
+        }
+      },
+      "errorLog": []
+    },
+    {
+      "id": 2,
+      "title": "Card 2",
+      "type": "TRIGGER",
+      "fallbackTitle": "Card 2",
+      "isValid": true,
+      "isInactive": false,
+      "isInit": false,
+      "if": {
+        "slot": "6",
+        "componentType": "Button",
+        "componentName": "PenButton",
+        "isMissingComponent": false,
+        "componentIsNotSetup": false,
+        "isMissingLiveslot": false,
+        "isMissingIntegration": false,
+        "action": "released",
+        "parameters": {
+          "count": 1
+        }
+      },
+      "then": {
+        "slot": "2",
+        "componentType": "Socket.IO Server",
+        "componentName": "Socket.IO Server",
+        "isMissingComponent": false,
+        "componentIsNotSetup": false,
+        "isMissingLiveslot": false,
+        "isMissingIntegration": false,
+        "reaction": "send",
+        "parameters": {
+          "message": "penUp"
+        }
+      },
+      "errorLog": []
+    },
+    {
+      "id": 3,
+      "title": "Card 3",
+      "type": "TRIGGER",
+      "fallbackTitle": "Card 3",
+      "isValid": true,
+      "isInactive": false,
+      "isInit": false,
+      "if": {
+        "slot": "5",
+        "componentType": "Button",
+        "componentName": "MoveButton",
+        "isMissingComponent": false,
+        "componentIsNotSetup": false,
+        "isMissingLiveslot": false,
+        "isMissingIntegration": false,
+        "action": "pressed",
+        "parameters": {
+          "count": 1
+        }
+      },
+      "then": {
+        "slot": "2",
+        "componentType": "Socket.IO Server",
+        "componentName": "Socket.IO Server",
+        "isMissingComponent": false,
+        "componentIsNotSetup": false,
+        "isMissingLiveslot": false,
+        "isMissingIntegration": false,
+        "reaction": "send",
+        "parameters": {
+          "message": "moveStart"
+        }
+      },
+      "errorLog": []
+    },
+    {
+      "id": 4,
+      "title": "Card 4",
+      "type": "TRIGGER",
+      "fallbackTitle": "Card 4",
+      "isValid": true,
+      "isInactive": false,
+      "isInit": false,
+      "if": {
+        "slot": "5",
+        "componentType": "Button",
+        "componentName": "MoveButton",
+        "isMissingComponent": false,
+        "componentIsNotSetup": false,
+        "isMissingLiveslot": false,
+        "isMissingIntegration": false,
+        "action": "released",
+        "parameters": {
+          "count": 1
+        }
+      },
+      "then": {
+        "slot": "2",
+        "componentType": "Socket.IO Server",
+        "componentName": "Socket.IO Server",
+        "isMissingComponent": false,
+        "componentIsNotSetup": false,
+        "isMissingLiveslot": false,
+        "isMissingIntegration": false,
+        "reaction": "send",
+        "parameters": {
+          "message": "moveEnd"
+        }
+      },
+      "errorLog": []
+    }
+  ],
+  "projectslots": [
+    {
+      "slot": "2",
+      "componentType": "Socket.IO Server",
+      "componentName": "Socket.IO Server",
+      "fallbackName": "Socket.IO Server"
+    },
+    {
+      "slot": "A0",
+      "componentType": "Potentiometer",
+      "componentName": "Potentiometer",
+      "fallbackName": "Potentiometer"
+    },
+    {
+      "slot": "6",
+      "componentType": "Button",
+      "componentName": "PenButton",
+      "fallbackName": "Button"
+    },
+    {
+      "slot": "5",
+      "componentType": "Button",
+      "componentName": "MoveButton",
+      "fallbackName": "Button-1"
+    }
+  ],
+  "boardName": "Seeduino Lotus"
+}
